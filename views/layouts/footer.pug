@@ -1,0 +1,30 @@
+.section_footer
+      .container
+        .footer_section_2
+          .row
+            .col-sm-6.col-md-6.col-lg-3
+              h2.account_text About Us
+              p.ipsum_text_2 dolor sit amet, consectetur magna aliqua...
+            .col-sm-6.col-md-6.col-lg-3
+              h2.account_text Useful Link
+              .useful_link
+                ul
+                  li
+                    a(href="#") Video games
+                  li
+                    a(href="#") Remote control
+                  li
+                    a(href="#") 3d controller
+            .col-sm-6.col-md-6.col-lg-3
+              h2.account_text Contact Us
+              p.ipsum_text_2 dolor sit amet, consectetur magna aliqua...
+            .col-sm-6.col-md-6.col-lg-3
+              h2.account_text Newsletter
+              input.email_text(type="text", placeholder="Enter Your Email", name="Enter Your Email")
+              button.subscribr_bt SUBSCRIBE
+        .social_icon
+          ul
+            each icon in ['fb', 'twitter', 'linkdin', 'instagram']
+              li
+                a(href="#")
+                  img(src=`images/${icon}-icon.png`)
