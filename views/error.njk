@@ -1,0 +1,10 @@
+{% extends "layouts/layout.njk" %}
+{% block content %}
+  <h1>{{ message }}</h1>
+  {% if error.status %}
+    <p>Код ошибки: {{ error.status }}</p>
+  {% endif %}
+  {% if env === 'development' %}
+    <pre>{{ error.stack }}</pre>
+  {% endif %}
+{% endblock %}

@@ -1,9 +1,0 @@
-extends layouts/layout.pug
-
-block content
-  h1 Error
-  h2= message
-  if error.status
-    h3 Status: #{error.status}
-  if error.stack && error
-    pre= error.stack
