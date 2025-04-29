@@ -125,11 +125,11 @@ router.get('/', function(req, res, next) {
 router.get('/about', function(req, res, next) {
   res.render('about.njk', { title: 'ABOUT', active: 'about' });
 });
-router.get('/products', function(req, res, next) {
-  res.render('products.njk', { title: 'OUR PRODUCTS', active: 'products' });
+router.get('/managment', function(req, res, next) {
+  res.render('managment.njk', { title: 'MANAGMENT', active: 'managment' });
 });
-router.get('/videogames', function(req, res, next) {
-  res.render('video.njk', { title: 'VIDEO GAMES', active: 'video' });
+router.get('/farms', function(req, res, next) {
+  res.render('farms.njk', { title: 'Farms', active: 'farms' });
 });
 router.get('/contact', function(req, res, next) {
   res.render('contact.njk', { title: 'CONTACT US', active: 'contact' });
