@@ -264,6 +264,7 @@ button {
     width: 100%;
     float: left;
     padding-top: 40px;
+    border-radius: 10px;
 }
 
 .video_text{
@@ -839,4 +840,79 @@ text-align: justify;
 font-size: 12px;
 color: #000;
 padding-left: 15px;
+}
+.img_ico {
+    width: 40px;
+    height: 40px; /* Опционально, если нужен квадратный размер */
+    object-fit: contain; /* Сохраняет пропорции изображения */
+}
+
+.div_ico {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+}
+
+.td_ico {
+    margin: 15px;
+    display: flex; /* Центрируем содержимое внутри td_ico */
+    justify-content: center;
+    align-items: center;
+}
+
+.viber_ico {
+    background-color: #665cac;
+    border-radius: 10px;
+    width: 70px;
+    height: 70px;
+}
+.viber_ico:hover{
+    cursor: pointer;
+    background-color: #5b4a9c;
+    transition: 0.3s;
+}
+
+.whatsapp_ico {
+    background-color: #29a71a;
+    border-radius: 10px;
+    width: 70px;
+    height: 70px;
+}
+.whatsapp_ico:hover{
+    cursor: pointer;
+    background-color: #1f7a0e;
+    transition: 0.3s;
+}
+
+.telegram_ico {
+    background-color: #039be5;
+    border-radius: 10px;
+    width: 70px;
+    height: 70px;
+}
+.telegram_ico:hover{
+    cursor: pointer;
+    background-color: #0277b5;
+    transition: 0.3s;
+}
+.img_fm{
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px #000000;
+}
+.fm_title{
+    font-size: 26px;
+    color: #000;
+    text-align: center;
+    padding-top: 20px;
+    text-shadow: 2px 2px 5px #ff0000;
+}
+.fm_text{
+    font-size: 18px;
+    text-align: justify;
+}
+.fm_btn{
+    padding-top: 20px;
+    text-align: center;
 }
