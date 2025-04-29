@@ -1,35 +1,74 @@
-	<!-- header section start -->
-	<div class="header_section">
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="logo"><a href="/"><img src="images/logo.png"></a></div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                  <a class="nav-link" href="/">HOME</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="about">ABOUT</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="products">OUR PRODUCTS</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="videogames">VIDEO GAMES</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="contact">CONTACT US</a>
-                </li>
-                <li class="nav-item pl-5">
-                  <a class="nav-link" href="#">SIGN IN</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">REGISTER</a>
-                </li>
-              </ul>
-            </div>
-        </nav>
-	</div>
-	<!-- header section end -->
+<!-- header section start -->
+<div class="header_section">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="logo">
+      <a href="/"><img src="images/logo.png"><span class="title_logo">Sonic Store</span></a>
+    </div>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        {% if active == "home" %}
+          <li class="nav-item active">
+            <a class="nav-link" href="/">HOME</a>
+          </li>
+        {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="/">HOME</a>
+          </li>
+        {% endif %}
+        {% if active == "about" %}
+          <li class="nav-item active">
+            <a class="nav-link" href="about">ABOUT</a>
+          </li>
+        {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="about">ABOUT</a>
+          </li>
+        {% endif %}
+        {% if active == "products" %}
+          <li class="nav-item active">
+            <a class="nav-link" href="products">OUR PRODUCTS</a>
+          </li>
+        {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="products">OUR PRODUCTS</a>
+          </li>
+        {% endif %}
+        {% if active == "video" %}
+          <li class="nav-item active">
+            <a class="nav-link" href="videogames">VIDEO GAMES</a>
+          </li>
+        {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="videogames">VIDEO GAMES</a>
+          </li>
+        {% endif %}
+        {% if active == "contact" %}
+          <li class="nav-item active">
+            <a class="nav-link" href="contact">CONTACT US</a>
+          </li>
+        {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="contact">CONTACT US</a>
+          </li>
+        {% endif %}
+        <li class="nav-item pl-5">
+          <a class="nav-link" href="#">SIGN IN</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">REGISTER</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+<!-- header section end -->

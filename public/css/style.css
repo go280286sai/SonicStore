@@ -238,7 +238,7 @@ button {
 .bg-light {
     background-color: #fefeff !important;
     box-shadow: 0px 0px 10px 0px;
-    border-top: 45px solid #333a44;
+    border-top: 45px solid #599ee9;
 }
 .navbar-light .navbar-nav .nav-link {
     color: #24292f;
@@ -819,3 +819,24 @@ button {
     margin-top: 0px; 
 }
 
+.title_logo{
+font-size: 24px;
+color: blue;
+text-shadow: 5px 1px 4px #000;
+}
+
+.logo_testimonial{
+    width: 200px;
+}
+.author_testimonial{
+    color: rgb(2, 48, 255);
+    text-shadow: 2px 2px 5px #000000;
+    text-decoration: underline;
+    font-size: 26px;
+}
+.text_testimonial{
+text-align: justify;
+font-size: 12px;
+color: #000;
+padding-left: 15px;
+}

@@ -1,10 +1,29 @@
 {% extends "layouts/layout.njk" %}
 {% block meta %}
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="author" content="">
-{% endblock %}
-{% block content %}
-    {% include "layouts/testimonial.njk" %}
-{% endblock %}
+        <meta name="keywords" content="">
+            <meta name="description" content="">
+                <meta name="author" content="">
+                {% endblock %}
+                {% block content %}
+                    {% include "layouts/testimonial.njk" %}
+                {% endblock %}
+                {% block script%}
+                <script>
+                                var owl = $('.owl-carousel');
+                                owl.owlCarousel({
+                                    items: 1,
+                                    loop: true,
+                                    margin: 50,
+                                    autoplay: true,
+                                    autoplayTimeout: 5000,
+                                    autoplayHoverPause: true
+                                });
+                                $('.play').on('click', function () {
+                                    owl.trigger('play.owl.autoplay', [1000])
+                                })
+                                $('.stop').on('click', function () {
+                                    owl.trigger('stop.owl.autoplay')
+                                })
+                            </script>
+                            {% endblock %}

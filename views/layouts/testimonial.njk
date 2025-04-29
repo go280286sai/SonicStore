@@ -1,26 +1,42 @@
- <!-- testimonial section start -->
- <div class="testimonial_section layout_padding">
-    <div class="container">
-      <h1 class="testimonial_text">Testimonial</h1>
-      <p class="ipsum_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
-      <div class="testimonial_section_2">
-        <div class="box_main">
-          <div class="quote_icon"><img src="images/quote-icon.png"></div>
-          <p class="dolor_text"> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum </p>
-          <div class="client_main">
-            <div class="client_left">
-              <div class="images_5"><img src="images/img-5.png"></div>
-            </div>
-            <div class="client_right">
-              <h1 class="sandy_text">Sandy Delex</h1>
-              <p class="sandy_text_1">Reprehenderit</p>
-            </div>
+<!-- testimonial section start -->
+<div class="testimonial_section layout_padding">
+  <div class="container">
+    <h1 class="testimonial_text">Our Clients Love Us</h1>
+    <div class="testimonial_section_2">
+      <div class="box_main">
+        {# <div class="quote_icon"><img src="images/quote-icon.png"> </div> #}
+        <div class="owl-carousel owl-theme">
+          {% for review in reviews%}
+          <div class="item">
+            <table>
+              <tr><td rowspan="3" class="logo_testimonial"><img src="{{ review.image }}"></td><td class="author_testimonial">{{ review.author }}<td></tr>
+              <tr><td class="text_testimonial"><h4>{{ review.text }}</h4></td></tr>
+            </table>
           </div>
+          {% endfor %}
         </div>
-      </div>
-      <div class="see_main">
-        <div class="see_bt"><a href="#">See More</a></div>
       </div>
     </div>
   </div>
-  <!-- testimonial section end -->
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<!-- testimonial section end -->
+<script>
+  var owl = $('.owl-carousel');
+  owl.owlCarousel({
+    items: 1,
+    loop: true,
+    margin: 50,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true
+  });
+  $('.play').on('click', function () {
+    owl.trigger('play.owl.autoplay', [1000])
+  })
+  $('.stop').on('click', function () {
+    owl.trigger('stop.owl.autoplay')
+  })
+</script>
