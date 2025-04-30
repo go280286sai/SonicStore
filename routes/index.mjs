@@ -108,7 +108,7 @@ const reviews = [
     image: "/images/man.jpg",
   },
   {
-    text: "Bevor ich zu Sonic gekommen bin, habe ich bereits mit 5 andere Farm Manager zusammengearbeitet. \nSonic ist nicht nur besser sondern unglaublich. \nMan bekommt nicht nur Management sondern hat immer einen Ansprechpartner der proaktiv ist, der hilft, Wissen weitergibt und auch verrückte Ideen anhört. \nVielen Dank Muffin! Das Management selbst ist unglaublich gut - meine Farmen waren schon gut, aber Sonic hat nochmal ordentlich was darausgeholt. \nIch habe mich nun für das VIP \nManagement für alle 15 Farmen entschieden, nachdem ich es mit 5 getestet hatte, weil es so gut ist. \nIch denke, der größte Unterschied, Der ehrlichste, ist, dass nicht nur Bots die Arbeit machen sondern auch Menschen",
+    text: "Bevor ich zu Sonic kam, hatte ich mit 5 anderen Farm Managern gearbeitet. Sonic ist nicht nur besser – es ist außergewöhnlich. Man hat nicht nur gutes Management, sondern auch einen proaktiven Ansprechpartner, der hilft und Ideen unterstützt. Danke, Muffin! Meine Farmen waren schon gut, aber Sonic hat noch mehr rausgeholt. Nach dem Test mit 5 Farmen habe ich jetzt alle 15 ins VIP Management gegeben – so gut ist es. Der größte Unterschied: Es arbeiten nicht nur Bots, sondern echte Menschen.",
     author: "ALTAIR",
     image: "/images/man.jpg",
   },
