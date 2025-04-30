@@ -1,3 +1,5 @@
+import dotenv from 'dotenv';
+dotenv.config();
 import createError from 'http-errors';
 import express, { json, urlencoded } from 'express';
 import { join, dirname } from 'path';
@@ -6,9 +8,11 @@ import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 import nunjucks from 'nunjucks';
 
+
 import usersRouter from './routes/users.mjs';
 import indexRouter from './routes/index.mjs';
 import adminRouter from './routes/admin.mjs';
+import mailRouter from './routes/mail.mjs';
 
 const port = process.env.PORT || 3000;
 const address = process.env.HOST || '0.0.0.0';
@@ -33,6 +37,7 @@ app.use(express.static(join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/admin', adminRouter);
+app.use('/mail', mailRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
