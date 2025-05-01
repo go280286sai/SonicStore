@@ -1,6 +1,6 @@
 import { Router } from 'express';
 const router = Router();
-
+import main from '../model/subscribe/index.mjs';
 const reviews = [
   {
     text: "ОMuffin the best 💖everytime everything great, thank you 😊",
@@ -135,5 +135,9 @@ router.get('/contact', function(req, res, next) {
   res.render('contact.njk', { title: 'CONTACT US', active: 'contact' });
 });
 
+router.get('/test', function(req, res, next) {
+  main()
+  res.send('ok');
+});
 
 export default router;

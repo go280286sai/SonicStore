@@ -1,9 +1,17 @@
 import { Router } from 'express';
 const router = Router();
 import { createTransport } from 'nodemailer';
+import he from 'he';
 
 router.post('/send', async (req, res) => {
-  const { name, email, phone, content } = req.body;
+    const name = he.encode(req.body.name);
+    const email = he.encode(req.body.email);
+    const phone = he.encode(req.body.phone);
+    const content = he.encode(req.body.content);
+  // Проверка на наличие обязательных полей
+    if (!name || !email || !phone || !content) {
+        return res.status(400).send('Пожалуйста, заполните все обязательные поля.');
+    }
 
   const transporter = createTransport({
     host: process.env.HOST_MAIL,
