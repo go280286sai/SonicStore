@@ -1,6 +1,6 @@
 import { Router } from 'express';
 const router = Router();
-import main from '../model/subscribe/index.mjs';
+// import main from '../model/subscribe/index.mjs';
 const reviews = [
   {
     text: "ОMuffin the best 💖everytime everything great, thank you 😊",
@@ -136,7 +136,7 @@ router.get('/contact', function(req, res, next) {
 });
 
 router.get('/test', function(req, res, next) {
-  main()
+  // main()
   res.send('ok');
 });
 
